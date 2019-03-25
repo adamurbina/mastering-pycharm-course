@@ -18,6 +18,13 @@ class Creature:
 class Wizard(Creature):
 
     def attack(self, creature):
+
+        """
+        This function allows wizard to battle some creature.
+        :param creature:
+        :return: True if you wizard wins, False if wizard is defeated
+        """
+
         print("The wizard {} attacks {}!".format(
             self.name, creature.name
         ))
@@ -34,6 +41,9 @@ class Wizard(Creature):
         else:
             print("The wizard has been DEFEATED!!!")
             return False
+
+    def wake_up(self):
+        print(f"I, {self.name} just woke up!")
 
 
 class SmallAnimal(Creature):
